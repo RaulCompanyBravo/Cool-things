@@ -1,3 +1,9 @@
+This is a modification of original raspctl interface using a framework called Bulma.
+The interface is also simplificated and is more easily to view your raspberry status.
+
+Original readme
+============================
+
 License
 =======
 Copyright (c) Jan Carreras Prat 2013.
