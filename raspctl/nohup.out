@@ -1,0 +1,705 @@
+Bottle v0.12.7 server starting up (using WSGIRefServer())...
+Listening on http://0.0.0.0:8086/
+Hit Ctrl-C to quit.
+
+Traceback (most recent call last):
+  File "core.py", line 401, in <module>
+    bottle.run(host='0.0.0.0', port=config.PORT, reloader=debug)
+  File "/usr/lib/python2.7/dist-packages/bottle.py", line 3120, in run
+    server.run(app)
+  File "/usr/lib/python2.7/dist-packages/bottle.py", line 2774, in run
+    srv = make_server(self.host, self.port, app, server_cls, handler_cls)
+  File "/usr/lib/python2.7/wsgiref/simple_server.py", line 151, in make_server
+    server = server_class((host, port), handler_class)
+  File "/usr/lib/python2.7/SocketServer.py", line 420, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/wsgiref/simple_server.py", line 48, in server_bind
+    HTTPServer.server_bind(self)
+  File "/usr/lib/python2.7/BaseHTTPServer.py", line 108, in server_bind
+    SocketServer.TCPServer.server_bind(self)
+  File "/usr/lib/python2.7/SocketServer.py", line 434, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+Bottle v0.12.7 server starting up (using WSGIRefServer())...
+Listening on http://0.0.0.0:8086/
+Hit Ctrl-C to quit.
+
+81.203.64.74 - - [21/Jul/2017 05:24:34] "GET / HTTP/1.1" 200 1925
+81.203.64.74 - - [21/Jul/2017 05:24:34] "GET /favicon.ico HTTP/1.1" 200 1925
+81.203.64.74 - - [21/Jul/2017 05:24:49] "GET / HTTP/1.1" 200 1925
+81.203.64.74 - - [21/Jul/2017 05:24:49] "GET /favicon.ico HTTP/1.1" 200 1925
+81.203.64.74 - - [21/Jul/2017 05:24:54] "POST /login HTTP/1.1" 200 690
+81.203.64.74 - - [21/Jul/2017 05:24:55] "GET /system_info HTTP/1.1" 200 7339
+81.203.64.74 - - [21/Jul/2017 05:24:55] "GET /favicon.ico HTTP/1.1" 200 1150
+81.203.64.74 - - [21/Jul/2017 05:24:55] "GET /bulma.css HTTP/1.1" 404 747
+81.203.64.74 - - [21/Jul/2017 05:25:13] "POST /login HTTP/1.1" 200 690
+81.203.64.74 - - [21/Jul/2017 05:25:13] "GET /system_info HTTP/1.1" 200 7339
+81.203.64.74 - - [21/Jul/2017 05:25:13] "GET /favicon.ico HTTP/1.1" 200 1150
+81.203.64.74 - - [21/Jul/2017 05:25:13] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 06:05:57] "GET / HTTP/1.1" 200 1925
+84.232.101.163 - - [21/Jul/2017 06:05:57] "GET /static/css/login.css HTTP/1.1" 200 668
+84.232.101.163 - - [21/Jul/2017 06:05:57] "GET /static/css/bootstrap.css HTTP/1.1" 200 124223
+84.232.101.163 - - [21/Jul/2017 06:05:57] "GET /static/css/bootstrap-responsive.css HTTP/1.1" 200 21751
+84.232.101.163 - - [21/Jul/2017 06:05:58] "GET /favicon.ico HTTP/1.1" 200 1925
+84.232.101.163 - - [21/Jul/2017 06:07:09] "POST /login HTTP/1.1" 200 690
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 212, in write
+    self.send_headers()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 270, in send_headers
+    self.send_preamble()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 191, in send_preamble
+    self._write('HTTP/%s %s\r\n' % (self.http_version,self.status))
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 391, in _write
+    self.stdout.write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 104] Connection reset by peer
+84.232.101.163 - - [21/Jul/2017 06:07:09] "POST /login HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 657, in __init__
+    self.finish()
+  File "/usr/lib/python2.7/SocketServer.py", line 716, in finish
+    self.wfile.close()
+  File "/usr/lib/python2.7/socket.py", line 279, in close
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+84.232.101.163 - - [21/Jul/2017 06:07:09] "GET /login HTTP/1.1" 405 747
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 212, in write
+    self.send_headers()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 270, in send_headers
+    self.send_preamble()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 191, in send_preamble
+    self._write('HTTP/%s %s\r\n' % (self.http_version,self.status))
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 391, in _write
+    self.stdout.write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 104] Connection reset by peer
+84.232.101.163 - - [21/Jul/2017 06:07:09] "GET /login HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/SocketServer.py", line 295, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 321, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python2.7/SocketServer.py", line 657, in __init__
+    self.finish()
+  File "/usr/lib/python2.7/SocketServer.py", line 716, in finish
+    self.wfile.close()
+  File "/usr/lib/python2.7/socket.py", line 279, in close
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+47.60.44.68 - - [21/Jul/2017 06:07:09] "GET / HTTP/1.1" 200 1925
+47.60.44.68 - - [21/Jul/2017 06:07:09] "GET /login HTTP/1.1" 405 747
+47.60.44.68 - - [21/Jul/2017 06:07:09] "GET /login HTTP/1.1" 405 747
+47.60.44.68 - - [21/Jul/2017 06:07:10] "GET /favicon.ico HTTP/1.1" 200 1925
+47.60.44.68 - - [21/Jul/2017 06:07:16] "GET / HTTP/1.1" 200 1925
+47.60.44.68 - - [21/Jul/2017 06:07:16] "GET /static/css/login.css HTTP/1.1" 304 0
+47.60.44.68 - - [21/Jul/2017 06:07:16] "GET /static/css/bootstrap-responsive.css HTTP/1.1" 304 0
+47.60.44.68 - - [21/Jul/2017 06:07:16] "GET /static/css/bootstrap.css HTTP/1.1" 304 0
+47.60.44.68 - - [21/Jul/2017 06:07:17] "GET /favicon.ico HTTP/1.1" 200 1925
+47.60.44.68 - - [21/Jul/2017 06:07:19] "POST /login HTTP/1.1" 200 690
+47.60.44.68 - - [21/Jul/2017 06:07:19] "GET /static/css/bulma.css HTTP/1.1" 304 0
+47.60.44.68 - - [21/Jul/2017 06:07:19] "GET /static/js/jquery-1.9.0.min.js HTTP/1.1" 304 0
+47.60.44.68 - - [21/Jul/2017 06:07:19] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+47.60.44.68 - - [21/Jul/2017 06:07:19] "GET /static/js/bootbox.min.js HTTP/1.1" 304 0
+47.60.44.68 - - [21/Jul/2017 06:07:20] "GET /system_info HTTP/1.1" 200 7337
+47.60.44.68 - - [21/Jul/2017 06:07:20] "GET /favicon.ico HTTP/1.1" 200 1150
+47.60.44.68 - - [21/Jul/2017 06:07:20] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 06:07:34] "POST /login HTTP/1.1" 200 690
+47.60.44.68 - - [21/Jul/2017 06:07:35] "GET /system_info HTTP/1.1" 200 7337
+47.60.44.68 - - [21/Jul/2017 06:07:43] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 08:43:24] "GET / HTTP/1.1" 200 690
+47.60.44.68 - - [21/Jul/2017 08:43:24] "GET /static/css/bulma.css HTTP/1.1" 304 0
+47.60.44.68 - - [21/Jul/2017 08:43:24] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+47.60.44.68 - - [21/Jul/2017 08:43:24] "GET /static/js/jquery-1.9.0.min.js HTTP/1.1" 304 0
+47.60.44.68 - - [21/Jul/2017 08:43:24] "GET /static/js/bootbox.min.js HTTP/1.1" 304 0
+47.60.44.68 - - [21/Jul/2017 08:43:25] "GET /system_info HTTP/1.1" 200 7341
+47.60.44.68 - - [21/Jul/2017 08:43:26] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 08:43:31] "GET / HTTP/1.1" 200 690
+47.60.44.68 - - [21/Jul/2017 08:43:31] "GET /system_info HTTP/1.1" 200 7353
+47.60.44.68 - - [21/Jul/2017 08:43:32] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 09:41:31] "GET / HTTP/1.1" 200 1925
+47.60.44.68 - - [21/Jul/2017 09:41:32] "GET /favicon.ico HTTP/1.1" 200 1925
+47.60.44.68 - - [21/Jul/2017 09:41:34] "POST /login HTTP/1.1" 200 690
+47.60.44.68 - - [21/Jul/2017 09:41:34] "GET /favicon.ico HTTP/1.1" 200 1150
+47.60.44.68 - - [21/Jul/2017 09:41:35] "GET /system_info HTTP/1.1" 200 7343
+47.60.44.68 - - [21/Jul/2017 09:41:35] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 10:56:48] "GET / HTTP/1.1" 200 1925
+47.60.44.68 - - [21/Jul/2017 10:56:48] "GET /static/css/bootstrap.css HTTP/1.1" 304 0
+47.60.44.68 - - [21/Jul/2017 10:56:48] "GET /static/css/login.css HTTP/1.1" 304 0
+47.60.44.68 - - [21/Jul/2017 10:56:48] "GET /static/css/bootstrap-responsive.css HTTP/1.1" 304 0
+47.60.44.68 - - [21/Jul/2017 10:56:49] "POST /login HTTP/1.1" 200 690
+47.60.44.68 - - [21/Jul/2017 10:56:50] "GET /static/css/bulma.css HTTP/1.1" 304 0
+47.60.44.68 - - [21/Jul/2017 10:56:50] "GET /static/js/jquery-1.9.0.min.js HTTP/1.1" 304 0
+47.60.44.68 - - [21/Jul/2017 10:56:50] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+47.60.44.68 - - [21/Jul/2017 10:56:50] "GET /static/js/bootbox.min.js HTTP/1.1" 304 0
+47.60.44.68 - - [21/Jul/2017 10:56:50] "GET /system_info HTTP/1.1" 200 7344
+47.60.44.68 - - [21/Jul/2017 10:56:50] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 10:57:03] "POST /login HTTP/1.1" 200 690
+47.60.44.68 - - [21/Jul/2017 10:57:04] "GET /system_info HTTP/1.1" 200 7353
+47.60.44.68 - - [21/Jul/2017 10:57:04] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 10:57:35] "GET /system_info HTTP/1.1" 200 7349
+47.60.44.68 - - [21/Jul/2017 10:57:35] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 10:58:05] "GET /system_info HTTP/1.1" 200 7359
+47.60.44.68 - - [21/Jul/2017 10:58:05] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 10:58:34] "GET /system_info HTTP/1.1" 200 7364
+47.60.44.68 - - [21/Jul/2017 10:58:35] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 10:59:07] "GET /system_info HTTP/1.1" 200 7366
+47.60.44.68 - - [21/Jul/2017 10:59:07] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 10:59:35] "GET /system_info HTTP/1.1" 200 7355
+47.60.44.68 - - [21/Jul/2017 10:59:35] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 11:00:05] "GET /system_info HTTP/1.1" 200 7351
+47.60.44.68 - - [21/Jul/2017 11:00:05] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 11:00:35] "GET /system_info HTTP/1.1" 200 7356
+47.60.44.68 - - [21/Jul/2017 11:00:35] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 11:01:05] "GET /system_info HTTP/1.1" 200 7366
+47.60.44.68 - - [21/Jul/2017 11:01:05] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 11:01:35] "GET /system_info HTTP/1.1" 200 7355
+47.60.44.68 - - [21/Jul/2017 11:01:35] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 11:02:04] "GET /system_info HTTP/1.1" 200 7364
+47.60.44.68 - - [21/Jul/2017 11:02:05] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 11:02:42] "GET /system_info HTTP/1.1" 200 7356
+47.60.44.68 - - [21/Jul/2017 11:02:42] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 11:03:05] "GET /system_info HTTP/1.1" 200 7344
+47.60.44.68 - - [21/Jul/2017 11:03:05] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 12:45:14] "GET /system_info HTTP/1.1" 200 7349
+47.60.44.68 - - [21/Jul/2017 12:45:14] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 12:45:38] "GET /system_info HTTP/1.1" 200 7341
+47.60.44.68 - - [21/Jul/2017 12:45:38] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 12:45:55] "POST /login HTTP/1.1" 200 690
+47.60.44.68 - - [21/Jul/2017 12:45:55] "GET /static/css/bulma.css HTTP/1.1" 304 0
+47.60.44.68 - - [21/Jul/2017 12:45:56] "GET /system_info HTTP/1.1" 200 7348
+47.60.44.68 - - [21/Jul/2017 12:45:56] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 12:46:26] "GET /system_info HTTP/1.1" 200 7353
+47.60.44.68 - - [21/Jul/2017 12:46:26] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:46:44] "GET / HTTP/1.1" 200 1925
+84.232.101.163 - - [21/Jul/2017 12:46:44] "GET /static/css/bootstrap.css HTTP/1.1" 200 124223
+84.232.101.163 - - [21/Jul/2017 12:46:44] "GET /static/css/bootstrap-responsive.css HTTP/1.1" 200 21751
+84.232.101.163 - - [21/Jul/2017 12:46:44] "GET /static/css/login.css HTTP/1.1" 200 668
+84.232.101.163 - - [21/Jul/2017 12:46:45] "GET /favicon.ico HTTP/1.1" 200 1925
+84.232.101.163 - - [21/Jul/2017 12:46:51] "POST /login HTTP/1.1" 200 690
+84.232.101.163 - - [21/Jul/2017 12:46:52] "GET /static/css/bulma.css HTTP/1.1" 200 250704
+84.232.101.163 - - [21/Jul/2017 12:46:52] "GET /static/js/jquery-1.9.0.min.js HTTP/1.1" 200 93068
+84.232.101.163 - - [21/Jul/2017 12:46:52] "GET /static/js/bootbox.min.js HTTP/1.1" 200 5591
+84.232.101.163 - - [21/Jul/2017 12:46:52] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 31596
+84.232.101.163 - - [21/Jul/2017 12:46:53] "GET /system_info HTTP/1.1" 200 7356
+84.232.101.163 - - [21/Jul/2017 12:46:53] "GET /favicon.ico HTTP/1.1" 200 1150
+84.232.101.163 - - [21/Jul/2017 12:46:53] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 12:46:56] "GET /system_info HTTP/1.1" 200 7355
+47.60.44.68 - - [21/Jul/2017 12:46:56] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:47:13] "GET /comandos HTTP/1.1" 404 745
+84.232.101.163 - - [21/Jul/2017 12:47:26] "GET /commands HTTP/1.1" 200 1643
+84.232.101.163 - - [21/Jul/2017 12:47:26] "GET /login HTTP/1.1" 405 747
+84.232.101.163 - - [21/Jul/2017 12:47:40] "GET / HTTP/1.1" 200 690
+84.232.101.163 - - [21/Jul/2017 12:47:40] "GET / HTTP/1.1" 200 690
+84.232.101.163 - - [21/Jul/2017 12:47:41] "GET /system_info HTTP/1.1" 200 7352
+84.232.101.163 - - [21/Jul/2017 12:47:41] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:47:41] "GET /system_info HTTP/1.1" 200 7349
+84.232.101.163 - - [21/Jul/2017 12:47:41] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:47:44] "GET / HTTP/1.1" 200 690
+84.232.101.163 - - [21/Jul/2017 12:47:44] "GET /system_info HTTP/1.1" 200 7348
+84.232.101.163 - - [21/Jul/2017 12:47:44] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:48:14] "GET /system_info HTTP/1.1" 200 7357
+84.232.101.163 - - [21/Jul/2017 12:48:15] "GET /system_info HTTP/1.1" 200 7356
+84.232.101.163 - - [21/Jul/2017 12:48:15] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:48:15] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:48:17] "GET / HTTP/1.1" 200 690
+84.232.101.163 - - [21/Jul/2017 12:48:17] "GET /system_info HTTP/1.1" 200 7356
+84.232.101.163 - - [21/Jul/2017 12:48:17] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:48:37] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:48:41] "GET /system_info HTTP/1.1" 200 7357
+84.232.101.163 - - [21/Jul/2017 12:48:41] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:48:47] "GET /system_info HTTP/1.1" 200 7354
+84.232.101.163 - - [21/Jul/2017 12:48:47] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:49:11] "GET /system_info HTTP/1.1" 200 7349
+84.232.101.163 - - [21/Jul/2017 12:49:12] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:49:17] "GET /system_info HTTP/1.1" 200 7356
+84.232.101.163 - - [21/Jul/2017 12:49:18] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:49:41] "GET /system_info HTTP/1.1" 200 7356
+84.232.101.163 - - [21/Jul/2017 12:49:41] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:49:48] "GET /system_info HTTP/1.1" 200 7347
+84.232.101.163 - - [21/Jul/2017 12:49:48] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:50:12] "GET /system_info HTTP/1.1" 200 7356
+84.232.101.163 - - [21/Jul/2017 12:50:12] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:50:17] "GET /system_info HTTP/1.1" 200 7347
+84.232.101.163 - - [21/Jul/2017 12:50:18] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:50:41] "GET /system_info HTTP/1.1" 200 7353
+84.232.101.163 - - [21/Jul/2017 12:50:41] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:50:47] "GET /system_info HTTP/1.1" 200 7340
+84.232.101.163 - - [21/Jul/2017 12:50:48] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:51:07] "GET / HTTP/1.1" 200 690
+84.232.101.163 - - [21/Jul/2017 12:51:08] "GET /system_info HTTP/1.1" 200 7359
+84.232.101.163 - - [21/Jul/2017 12:51:08] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:51:09] "GET / HTTP/1.1" 200 690
+84.232.101.163 - - [21/Jul/2017 12:51:10] "GET /system_info HTTP/1.1" 200 7349
+84.232.101.163 - - [21/Jul/2017 12:51:10] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:51:11] "GET / HTTP/1.1" 200 690
+84.232.101.163 - - [21/Jul/2017 12:51:11] "GET /system_info HTTP/1.1" 200 7359
+84.232.101.163 - - [21/Jul/2017 12:51:11] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:51:12] "GET /system_info HTTP/1.1" 200 7346
+84.232.101.163 - - [21/Jul/2017 12:51:12] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:51:12] "GET / HTTP/1.1" 200 690
+84.232.101.163 - - [21/Jul/2017 12:51:13] "GET /system_info HTTP/1.1" 200 7346
+84.232.101.163 - - [21/Jul/2017 12:51:13] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:51:13] "GET / HTTP/1.1" 200 690
+84.232.101.163 - - [21/Jul/2017 12:51:14] "GET /system_info HTTP/1.1" 200 7346
+84.232.101.163 - - [21/Jul/2017 12:51:14] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:51:14] "GET / HTTP/1.1" 200 690
+84.232.101.163 - - [21/Jul/2017 12:51:15] "GET /system_info HTTP/1.1" 200 7346
+84.232.101.163 - - [21/Jul/2017 12:51:15] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:51:15] "GET / HTTP/1.1" 200 690
+84.232.101.163 - - [21/Jul/2017 12:51:15] "GET /system_info HTTP/1.1" 200 7356
+84.232.101.163 - - [21/Jul/2017 12:51:15] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:51:16] "GET / HTTP/1.1" 200 690
+84.232.101.163 - - [21/Jul/2017 12:51:16] "GET /system_info HTTP/1.1" 200 7354
+84.232.101.163 - - [21/Jul/2017 12:51:16] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:51:18] "GET / HTTP/1.1" 200 690
+84.232.101.163 - - [21/Jul/2017 12:51:18] "GET /system_info HTTP/1.1" 200 7354
+84.232.101.163 - - [21/Jul/2017 12:51:18] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:51:23] "GET / HTTP/1.1" 200 690
+84.232.101.163 - - [21/Jul/2017 12:51:24] "GET /system_info HTTP/1.1" 200 7356
+84.232.101.163 - - [21/Jul/2017 12:51:24] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:51:41] "GET /system_info HTTP/1.1" 200 7365
+84.232.101.163 - - [21/Jul/2017 12:51:42] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:51:49] "GET /services HTTP/1.1" 200 60559
+84.232.101.163 - - [21/Jul/2017 12:52:12] "GET /system_info HTTP/1.1" 200 7348
+84.232.101.163 - - [21/Jul/2017 12:52:12] "GET /bulma.css HTTP/1.1" 404 747
+84.232.101.163 - - [21/Jul/2017 12:52:30] "GET /services?filter_favorites=true HTTP/1.1" 200 3429
+84.232.101.163 - - [21/Jul/2017 12:52:39] "GET /services?filter_favorites=false HTTP/1.1" 200 60559
+84.232.101.163 - - [21/Jul/2017 12:52:41] "GET /system_info HTTP/1.1" 200 7355
+84.232.101.163 - - [21/Jul/2017 12:52:41] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 12:53:51] "GET /login HTTP/1.1" 405 747
+47.60.44.68 - - [21/Jul/2017 12:53:55] "GET / HTTP/1.1" 200 690
+47.60.44.68 - - [21/Jul/2017 12:53:55] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+47.60.44.68 - - [21/Jul/2017 12:53:55] "GET /static/js/jquery-1.9.0.min.js HTTP/1.1" 304 0
+47.60.44.68 - - [21/Jul/2017 12:53:55] "GET /static/js/bootbox.min.js HTTP/1.1" 304 0
+47.60.44.68 - - [21/Jul/2017 12:53:55] "GET /system_info HTTP/1.1" 200 7340
+47.60.44.68 - - [21/Jul/2017 12:53:56] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 12:54:39] "GET /system_info HTTP/1.1" 200 7356
+47.60.44.68 - - [21/Jul/2017 12:54:39] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 12:55:10] "GET /system_info HTTP/1.1" 200 7338
+47.60.44.68 - - [21/Jul/2017 12:55:10] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 12:55:39] "GET /system_info HTTP/1.1" 200 7346
+47.60.44.68 - - [21/Jul/2017 12:55:40] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 12:56:09] "GET /system_info HTTP/1.1" 200 7357
+47.60.44.68 - - [21/Jul/2017 12:56:10] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 12:56:40] "GET /system_info HTTP/1.1" 200 7355
+47.60.44.68 - - [21/Jul/2017 12:56:40] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 12:57:09] "GET /system_info HTTP/1.1" 200 7343
+47.60.44.68 - - [21/Jul/2017 12:57:10] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 12:57:42] "GET /system_info HTTP/1.1" 200 7366
+47.60.44.68 - - [21/Jul/2017 12:57:43] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 12:58:09] "GET /system_info HTTP/1.1" 200 7356
+47.60.44.68 - - [21/Jul/2017 12:58:10] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 12:58:39] "GET /system_info HTTP/1.1" 200 7342
+47.60.44.68 - - [21/Jul/2017 12:58:40] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 12:59:09] "GET /system_info HTTP/1.1" 200 7365
+47.60.44.68 - - [21/Jul/2017 12:59:10] "GET /bulma.css HTTP/1.1" 404 747
+192.168.1.6 - - [21/Jul/2017 14:05:31] "GET / HTTP/1.1" 200 1925
+192.168.1.6 - - [21/Jul/2017 14:05:31] "GET /static/css/bootstrap.css HTTP/1.1" 200 124223
+192.168.1.6 - - [21/Jul/2017 14:05:31] "GET /static/css/login.css HTTP/1.1" 200 668
+192.168.1.6 - - [21/Jul/2017 14:05:31] "GET /static/css/bootstrap-responsive.css HTTP/1.1" 200 21751
+192.168.1.6 - - [21/Jul/2017 14:05:37] "POST /login HTTP/1.1" 200 690
+192.168.1.6 - - [21/Jul/2017 14:05:37] "GET /static/css/bulma.css HTTP/1.1" 200 250704
+192.168.1.6 - - [21/Jul/2017 14:05:37] "GET /static/js/jquery-1.9.0.min.js HTTP/1.1" 200 93068
+192.168.1.6 - - [21/Jul/2017 14:05:37] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 31596
+192.168.1.6 - - [21/Jul/2017 14:05:37] "GET /static/js/bootbox.min.js HTTP/1.1" 200 5591
+192.168.1.6 - - [21/Jul/2017 14:05:37] "GET /system_info HTTP/1.1" 200 7354
+192.168.1.6 - - [21/Jul/2017 14:05:37] "GET /bulma.css HTTP/1.1" 404 740
+192.168.1.6 - - [21/Jul/2017 14:06:07] "GET /system_info HTTP/1.1" 200 7344
+192.168.1.6 - - [21/Jul/2017 14:06:07] "GET /bulma.css HTTP/1.1" 404 740
+Bottle v0.12.7 server starting up (using WSGIRefServer())...
+Listening on http://0.0.0.0:8086/
+Hit Ctrl-C to quit.
+
+81.203.64.74 - - [21/Jul/2017 14:23:56] "GET / HTTP/1.1" 200 1925
+81.203.64.74 - - [21/Jul/2017 14:23:56] "GET /static/css/bootstrap.css HTTP/1.1" 200 124223
+81.203.64.74 - - [21/Jul/2017 14:23:56] "GET /static/css/login.css HTTP/1.1" 200 668
+81.203.64.74 - - [21/Jul/2017 14:23:56] "GET /static/css/bootstrap-responsive.css HTTP/1.1" 200 21751
+81.203.64.74 - - [21/Jul/2017 14:24:00] "POST /login HTTP/1.1" 200 690
+81.203.64.74 - - [21/Jul/2017 14:24:00] "GET /static/css/bulma.css HTTP/1.1" 200 250704
+81.203.64.74 - - [21/Jul/2017 14:24:00] "GET /static/js/jquery-1.9.0.min.js HTTP/1.1" 200 93068
+81.203.64.74 - - [21/Jul/2017 14:24:00] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 31596
+81.203.64.74 - - [21/Jul/2017 14:24:00] "GET /static/js/bootbox.min.js HTTP/1.1" 200 5591
+81.203.64.74 - - [21/Jul/2017 14:24:01] "GET /system_info HTTP/1.1" 200 7354
+81.203.64.74 - - [21/Jul/2017 14:24:01] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 14:35:33] "GET /login HTTP/1.1" 405 747
+47.60.44.68 - - [21/Jul/2017 14:35:33] "GET / HTTP/1.1" 200 1925
+47.60.44.68 - - [21/Jul/2017 14:35:33] "GET /favicon.ico HTTP/1.1" 200 1925
+47.60.44.68 - - [21/Jul/2017 14:35:38] "GET / HTTP/1.1" 200 1925
+47.60.44.68 - - [21/Jul/2017 14:35:38] "GET /static/css/bootstrap.css HTTP/1.1" 304 0
+47.60.44.68 - - [21/Jul/2017 14:35:38] "GET /static/css/login.css HTTP/1.1" 304 0
+47.60.44.68 - - [21/Jul/2017 14:35:38] "GET /static/css/bootstrap-responsive.css HTTP/1.1" 304 0
+47.60.44.68 - - [21/Jul/2017 14:35:38] "GET /favicon.ico HTTP/1.1" 200 1925
+47.60.44.68 - - [21/Jul/2017 14:35:40] "POST /login HTTP/1.1" 200 690
+47.60.44.68 - - [21/Jul/2017 14:35:40] "GET /system_info HTTP/1.1" 200 7356
+47.60.44.68 - - [21/Jul/2017 14:35:40] "GET /favicon.ico HTTP/1.1" 200 1150
+47.60.44.68 - - [21/Jul/2017 14:35:41] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 14:36:12] "GET /system_info HTTP/1.1" 200 7345
+47.60.44.68 - - [21/Jul/2017 14:36:12] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 14:37:39] "GET /system_info HTTP/1.1" 200 7356
+47.60.44.68 - - [21/Jul/2017 14:37:39] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 14:38:37] "GET /system_info HTTP/1.1" 200 7354
+47.60.44.68 - - [21/Jul/2017 14:38:37] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 14:39:50] "GET /system_info HTTP/1.1" 200 7363
+47.60.44.68 - - [21/Jul/2017 14:39:50] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 14:40:51] "GET /system_info HTTP/1.1" 200 7352
+47.60.44.68 - - [21/Jul/2017 14:40:52] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 14:41:37] "GET /system_info HTTP/1.1" 200 7352
+47.60.44.68 - - [21/Jul/2017 14:41:38] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 14:42:04] "GET /system_info HTTP/1.1" 200 7362
+47.60.44.68 - - [21/Jul/2017 14:42:24] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 14:44:46] "GET /system_info HTTP/1.1" 200 7344
+47.60.44.68 - - [21/Jul/2017 14:44:46] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 14:44:49] "GET / HTTP/1.1" 200 690
+47.60.44.68 - - [21/Jul/2017 14:44:49] "GET /static/css/bulma.css HTTP/1.1" 304 0
+47.60.44.68 - - [21/Jul/2017 14:44:50] "GET /system_info HTTP/1.1" 200 7344
+47.60.44.68 - - [21/Jul/2017 14:44:50] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 15:19:52] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 15:20:55] "GET /bulma.css HTTP/1.1" 404 747
+47.60.44.68 - - [21/Jul/2017 15:57:02] "GET / HTTP/1.1" 200 1925
+47.60.44.68 - - [21/Jul/2017 15:57:04] "POST /login HTTP/1.1" 200 690
+47.60.44.68 - - [21/Jul/2017 15:57:04] "GET /static/js/jquery-1.9.0.min.js HTTP/1.1" 304 0
+47.60.44.68 - - [21/Jul/2017 15:57:04] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+47.60.44.68 - - [21/Jul/2017 15:57:04] "GET /static/js/bootbox.min.js HTTP/1.1" 304 0
+47.60.44.68 - - [21/Jul/2017 15:57:05] "GET /system_info HTTP/1.1" 200 7360
+47.60.44.68 - - [21/Jul/2017 15:57:05] "GET /bulma.css HTTP/1.1" 404 747
+81.203.64.74 - - [21/Jul/2017 18:12:10] "GET / HTTP/1.1" 200 1925
+81.203.64.74 - - [21/Jul/2017 18:12:11] "GET /static/css/login.css HTTP/1.1" 304 0
+81.203.64.74 - - [21/Jul/2017 18:12:11] "GET /static/css/bootstrap.css HTTP/1.1" 304 0
+81.203.64.74 - - [21/Jul/2017 18:12:11] "GET /static/css/bootstrap-responsive.css HTTP/1.1" 304 0
+81.203.64.74 - - [21/Jul/2017 18:12:13] "POST /login HTTP/1.1" 200 690
+81.203.64.74 - - [21/Jul/2017 18:12:13] "GET /static/css/bulma.css HTTP/1.1" 304 0
+81.203.64.74 - - [21/Jul/2017 18:12:14] "GET /system_info HTTP/1.1" 200 7361
+81.203.64.74 - - [21/Jul/2017 18:12:14] "GET /bulma.css HTTP/1.1" 404 747
+81.203.64.74 - - [21/Jul/2017 18:29:29] "GET / HTTP/1.1" 200 1925
+81.203.64.74 - - [21/Jul/2017 18:29:34] "POST /login HTTP/1.1" 200 690
+81.203.64.74 - - [21/Jul/2017 18:29:34] "GET /static/js/jquery-1.9.0.min.js HTTP/1.1" 304 0
+81.203.64.74 - - [21/Jul/2017 18:29:34] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+81.203.64.74 - - [21/Jul/2017 18:29:34] "GET /static/js/bootbox.min.js HTTP/1.1" 304 0
+81.203.64.74 - - [21/Jul/2017 18:29:34] "GET /system_info HTTP/1.1" 200 7372
+81.203.64.74 - - [21/Jul/2017 18:29:35] "GET /bulma.css HTTP/1.1" 404 747
+47.60.42.199 - - [21/Jul/2017 20:38:44] "GET / HTTP/1.1" 200 1925
+47.60.42.199 - - [21/Jul/2017 20:38:47] "POST /login HTTP/1.1" 200 690
+47.60.42.199 - - [21/Jul/2017 20:38:47] "GET /login HTTP/1.1" 405 747
+47.60.42.199 - - [21/Jul/2017 20:38:56] "GET /static/css/bulma.css HTTP/1.1" 304 0
+47.60.42.199 - - [21/Jul/2017 20:38:56] "GET /login HTTP/1.1" 405 747
+47.60.42.199 - - [21/Jul/2017 20:39:03] "GET / HTTP/1.1" 200 690
+47.60.42.199 - - [21/Jul/2017 20:39:03] "GET /system_info HTTP/1.1" 200 7372
+47.60.42.199 - - [21/Jul/2017 20:39:04] "GET /system_info HTTP/1.1" 200 7364
+47.60.42.199 - - [21/Jul/2017 20:39:04] "GET /bulma.css HTTP/1.1" 404 747
+47.60.42.199 - - [21/Jul/2017 21:27:49] "GET / HTTP/1.1" 200 1925
+47.60.42.199 - - [21/Jul/2017 21:27:49] "GET /favicon.ico HTTP/1.1" 200 1925
+47.60.42.199 - - [21/Jul/2017 21:27:51] "POST /login HTTP/1.1" 200 690
+47.60.42.199 - - [21/Jul/2017 21:27:52] "GET /static/js/jquery-1.9.0.min.js HTTP/1.1" 304 0
+47.60.42.199 - - [21/Jul/2017 21:27:52] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+47.60.42.199 - - [21/Jul/2017 21:27:52] "GET /static/js/bootbox.min.js HTTP/1.1" 304 0
+47.60.42.199 - - [21/Jul/2017 21:27:52] "GET /system_info HTTP/1.1" 200 7361
+47.60.42.199 - - [21/Jul/2017 21:27:52] "GET /favicon.ico HTTP/1.1" 200 1150
+47.60.42.199 - - [21/Jul/2017 21:27:52] "GET /bulma.css HTTP/1.1" 404 747
+47.60.42.199 - - [21/Jul/2017 21:28:43] "GET /system_info HTTP/1.1" 200 7364
+47.60.42.199 - - [21/Jul/2017 21:28:43] "GET /bulma.css HTTP/1.1" 404 747
+47.60.42.199 - - [21/Jul/2017 21:31:41] "GET /system_info HTTP/1.1" 200 7364
+47.60.42.199 - - [21/Jul/2017 21:31:41] "GET /bulma.css HTTP/1.1" 404 747
+47.60.42.199 - - [21/Jul/2017 21:39:12] "GET /system_info HTTP/1.1" 200 7364
+47.60.42.199 - - [21/Jul/2017 21:39:12] "GET /bulma.css HTTP/1.1" 404 747
+47.60.42.199 - - [21/Jul/2017 21:39:40] "GET /system_info HTTP/1.1" 200 7372
+47.60.42.199 - - [21/Jul/2017 21:39:41] "GET /bulma.css HTTP/1.1" 404 747
+47.60.42.199 - - [21/Jul/2017 21:41:39] "GET /system_info HTTP/1.1" 200 7360
+47.60.42.199 - - [21/Jul/2017 21:41:39] "GET /bulma.css HTTP/1.1" 404 747
+47.60.42.199 - - [21/Jul/2017 21:42:27] "GET /system_info HTTP/1.1" 200 7364
+47.60.42.199 - - [21/Jul/2017 21:42:27] "GET /bulma.css HTTP/1.1" 404 747
+47.60.42.199 - - [21/Jul/2017 21:44:41] "GET /system_info HTTP/1.1" 200 7364
+47.60.42.199 - - [21/Jul/2017 21:44:42] "GET /bulma.css HTTP/1.1" 404 747
+47.60.42.199 - - [21/Jul/2017 21:47:43] "GET /system_info HTTP/1.1" 200 7364
+47.60.42.199 - - [21/Jul/2017 21:47:43] "GET /bulma.css HTTP/1.1" 404 747
+47.60.42.199 - - [21/Jul/2017 21:55:30] "GET / HTTP/1.1" 200 690
+47.60.42.199 - - [21/Jul/2017 21:55:31] "GET /system_info HTTP/1.1" 200 7364
+47.60.42.199 - - [21/Jul/2017 21:55:31] "GET /system_info HTTP/1.1" 200 7364
+47.60.42.199 - - [21/Jul/2017 21:55:31] "GET /bulma.css HTTP/1.1" 404 747
+47.60.42.199 - - [21/Jul/2017 21:55:31] "GET /bulma.css HTTP/1.1" 404 747
+80.82.77.139 - - [22/Jul/2017 07:06:42] "GET / HTTP/1.1" 200 1925
+80.82.77.139 - - [22/Jul/2017 07:06:49] "GET / HTTP/1.1" 200 1925
+80.82.77.139 - - [22/Jul/2017 07:06:58] "GET / HTTP/1.1" 200 1925
+80.82.77.139 - - [22/Jul/2017 07:07:14] "GET / HTTP/1.1" 200 1925
+31.4.210.78 - - [22/Jul/2017 08:27:15] "GET / HTTP/1.1" 200 1925
+31.4.210.78 - - [22/Jul/2017 08:27:16] "GET /favicon.ico HTTP/1.1" 200 1925
+31.4.210.78 - - [22/Jul/2017 08:27:18] "POST /login HTTP/1.1" 200 690
+31.4.210.78 - - [22/Jul/2017 08:27:18] "GET /static/css/bulma.css HTTP/1.1" 304 0
+31.4.210.78 - - [22/Jul/2017 08:27:18] "GET /static/js/jquery-1.9.0.min.js HTTP/1.1" 304 0
+31.4.210.78 - - [22/Jul/2017 08:27:18] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+31.4.210.78 - - [22/Jul/2017 08:27:18] "GET /static/js/bootbox.min.js HTTP/1.1" 304 0
+31.4.210.78 - - [22/Jul/2017 08:27:18] "GET /favicon.ico HTTP/1.1" 200 1150
+31.4.210.78 - - [22/Jul/2017 08:27:19] "GET /system_info HTTP/1.1" 200 7367
+31.4.210.78 - - [22/Jul/2017 08:27:19] "GET /bulma.css HTTP/1.1" 404 747
+31.4.210.78 - - [22/Jul/2017 09:42:33] "GET /login HTTP/1.1" 405 747
+31.4.210.78 - - [22/Jul/2017 09:42:36] "GET / HTTP/1.1" 200 1925
+31.4.210.78 - - [22/Jul/2017 09:42:36] "GET /static/css/bootstrap.css HTTP/1.1" 304 0
+31.4.210.78 - - [22/Jul/2017 09:42:36] "GET /static/css/login.css HTTP/1.1" 304 0
+31.4.210.78 - - [22/Jul/2017 09:42:36] "GET /static/css/bootstrap-responsive.css HTTP/1.1" 304 0
+31.4.210.78 - - [22/Jul/2017 09:42:38] "POST /login HTTP/1.1" 200 690
+31.4.210.78 - - [22/Jul/2017 09:42:38] "GET /system_info HTTP/1.1" 200 7374
+31.4.210.78 - - [22/Jul/2017 09:42:38] "GET /bulma.css HTTP/1.1" 404 747
+31.4.210.78 - - [22/Jul/2017 11:01:58] "GET /login HTTP/1.1" 405 747
+31.4.210.78 - - [22/Jul/2017 11:40:30] "GET / HTTP/1.1" 200 1925
+31.4.210.78 - - [22/Jul/2017 11:40:45] "POST /login HTTP/1.1" 200 690
+31.4.210.78 - - [22/Jul/2017 11:40:45] "GET / HTTP/1.1" 200 1925
+31.4.210.78 - - [22/Jul/2017 11:41:03] "POST /login HTTP/1.1" 200 690
+31.4.210.78 - - [22/Jul/2017 11:41:03] "GET /system_info HTTP/1.1" 200 7373
+31.4.210.78 - - [22/Jul/2017 13:33:15] "GET / HTTP/1.1" 200 1925
+31.4.210.78 - - [22/Jul/2017 13:33:16] "POST /login HTTP/1.1" 200 690
+31.4.210.78 - - [22/Jul/2017 13:33:16] "GET /static/css/bulma.css HTTP/1.1" 304 0
+31.4.210.78 - - [22/Jul/2017 13:33:16] "GET /static/js/jquery-1.9.0.min.js HTTP/1.1" 304 0
+31.4.210.78 - - [22/Jul/2017 13:33:17] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+31.4.210.78 - - [22/Jul/2017 13:33:17] "GET /static/js/bootbox.min.js HTTP/1.1" 304 0
+31.4.210.78 - - [22/Jul/2017 13:33:17] "GET /system_info HTTP/1.1" 200 7367
+31.4.210.78 - - [22/Jul/2017 13:33:17] "GET /bulma.css HTTP/1.1" 404 747
+31.4.210.78 - - [22/Jul/2017 13:33:47] "GET /system_info HTTP/1.1" 200 7373
+31.4.210.78 - - [22/Jul/2017 13:33:48] "GET /bulma.css HTTP/1.1" 404 747
+31.4.210.78 - - [22/Jul/2017 13:34:17] "GET /system_info HTTP/1.1" 200 7367
+31.4.210.78 - - [22/Jul/2017 13:34:18] "GET /bulma.css HTTP/1.1" 404 747
+31.4.210.78 - - [22/Jul/2017 13:34:41] "POST /login HTTP/1.1" 200 690
+31.4.210.78 - - [22/Jul/2017 13:34:41] "GET /system_info HTTP/1.1" 200 7362
+31.4.210.78 - - [22/Jul/2017 13:34:42] "GET /bulma.css HTTP/1.1" 404 747
+31.4.210.78 - - [22/Jul/2017 13:35:15] "GET /system_info HTTP/1.1" 200 7367
+31.4.210.78 - - [22/Jul/2017 13:35:15] "GET /bulma.css HTTP/1.1" 404 747
+31.4.210.78 - - [22/Jul/2017 13:38:05] "GET /system_info HTTP/1.1" 200 7363
+31.4.210.78 - - [22/Jul/2017 13:38:06] "GET /bulma.css HTTP/1.1" 404 747
+31.4.210.78 - - [22/Jul/2017 13:40:01] "GET /system_info HTTP/1.1" 200 7373
+31.4.210.78 - - [22/Jul/2017 13:40:01] "GET /bulma.css HTTP/1.1" 404 747
+81.203.64.74 - - [22/Jul/2017 16:23:33] "GET / HTTP/1.1" 200 1925
+81.203.64.74 - - [22/Jul/2017 16:23:33] "GET /static/css/bootstrap.css HTTP/1.1" 304 0
+81.203.64.74 - - [22/Jul/2017 16:23:33] "GET /static/css/login.css HTTP/1.1" 304 0
+81.203.64.74 - - [22/Jul/2017 16:23:33] "GET /static/css/bootstrap-responsive.css HTTP/1.1" 304 0
+81.203.64.74 - - [22/Jul/2017 16:23:34] "POST /login HTTP/1.1" 200 690
+81.203.64.74 - - [22/Jul/2017 16:23:35] "GET /system_info HTTP/1.1" 200 7361
+81.203.64.74 - - [22/Jul/2017 16:23:35] "GET /bulma.css HTTP/1.1" 404 747
+213.4.81.178 - - [22/Jul/2017 18:11:12] "GET / HTTP/1.1" 200 1925
+213.4.81.178 - - [22/Jul/2017 18:11:14] "POST /login HTTP/1.1" 200 690
+213.4.81.178 - - [22/Jul/2017 18:11:14] "GET /static/css/bulma.css HTTP/1.1" 304 0
+213.4.81.178 - - [22/Jul/2017 18:11:14] "GET /static/js/jquery-1.9.0.min.js HTTP/1.1" 304 0
+213.4.81.178 - - [22/Jul/2017 18:11:14] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+213.4.81.178 - - [22/Jul/2017 18:11:14] "GET /static/js/bootbox.min.js HTTP/1.1" 304 0
+213.4.81.178 - - [22/Jul/2017 18:11:15] "GET /system_info HTTP/1.1" 200 7361
+213.4.81.178 - - [22/Jul/2017 18:11:15] "GET /bulma.css HTTP/1.1" 404 747
+213.4.81.178 - - [22/Jul/2017 18:11:28] "POST /login HTTP/1.1" 200 690
+213.4.81.178 - - [22/Jul/2017 18:11:28] "GET /system_info HTTP/1.1" 200 7369
+213.4.81.178 - - [22/Jul/2017 18:11:29] "GET /bulma.css HTTP/1.1" 404 747
+213.4.81.178 - - [22/Jul/2017 18:27:18] "GET / HTTP/1.1" 200 1925
+213.4.81.178 - - [22/Jul/2017 18:27:28] "POST /login HTTP/1.1" 200 690
+213.4.81.178 - - [22/Jul/2017 18:27:28] "GET /login HTTP/1.1" 405 747
+213.4.81.178 - - [22/Jul/2017 18:27:29] "GET /system_info HTTP/1.1" 200 7361
+213.4.81.178 - - [22/Jul/2017 18:27:38] "GET /bulma.css HTTP/1.1" 404 747
+213.4.81.178 - - [22/Jul/2017 18:27:38] "GET /login HTTP/1.1" 405 747
+213.4.81.178 - - [22/Jul/2017 18:27:43] "GET / HTTP/1.1" 200 690
+213.4.81.178 - - [22/Jul/2017 18:27:44] "GET /system_info HTTP/1.1" 200 7361
+213.4.81.178 - - [22/Jul/2017 18:27:44] "GET /bulma.css HTTP/1.1" 404 747
+213.4.81.178 - - [22/Jul/2017 18:28:14] "GET /system_info HTTP/1.1" 200 7361
+213.4.81.178 - - [22/Jul/2017 18:28:14] "GET /bulma.css HTTP/1.1" 404 747
+81.203.64.74 - - [22/Jul/2017 18:58:00] "GET / HTTP/1.1" 200 1925
+81.203.64.74 - - [22/Jul/2017 18:58:00] "GET /favicon.ico HTTP/1.1" 200 1925
+81.203.64.74 - - [22/Jul/2017 18:58:02] "POST /login HTTP/1.1" 200 690
+81.203.64.74 - - [22/Jul/2017 18:58:03] "GET /system_info HTTP/1.1" 200 7361
+81.203.64.74 - - [22/Jul/2017 18:58:03] "GET /favicon.ico HTTP/1.1" 200 1150
+81.203.64.74 - - [22/Jul/2017 18:58:03] "GET /bulma.css HTTP/1.1" 404 747
+81.203.64.74 - - [22/Jul/2017 19:21:16] "GET / HTTP/1.1" 200 1925
+81.203.64.74 - - [22/Jul/2017 19:21:18] "POST /login HTTP/1.1" 200 690
+81.203.64.74 - - [22/Jul/2017 19:21:18] "GET /system_info HTTP/1.1" 200 7369
+81.203.64.74 - - [22/Jul/2017 19:21:18] "GET /bulma.css HTTP/1.1" 404 747
+31.4.209.116 - - [23/Jul/2017 00:17:26] "GET / HTTP/1.1" 200 1925
+31.4.209.116 - - [23/Jul/2017 00:17:27] "GET /static/css/login.css HTTP/1.1" 304 0
+31.4.209.116 - - [23/Jul/2017 00:17:27] "GET /static/css/bootstrap.css HTTP/1.1" 304 0
+31.4.209.116 - - [23/Jul/2017 00:17:27] "GET /static/css/bootstrap-responsive.css HTTP/1.1" 304 0
+31.4.209.116 - - [23/Jul/2017 00:19:06] "POST /login HTTP/1.1" 200 690
+31.4.209.116 - - [23/Jul/2017 00:19:06] "POST /login HTTP/1.1" 200 690
+31.4.209.116 - - [23/Jul/2017 00:19:06] "GET /static/css/bulma.css HTTP/1.1" 304 0
+31.4.209.116 - - [23/Jul/2017 00:19:06] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+31.4.209.116 - - [23/Jul/2017 00:19:06] "GET /static/js/jquery-1.9.0.min.js HTTP/1.1" 304 0
+31.4.209.116 - - [23/Jul/2017 00:19:06] "GET /static/js/bootbox.min.js HTTP/1.1" 304 0
+31.4.209.116 - - [23/Jul/2017 00:19:07] "GET /system_info HTTP/1.1" 200 7363
+31.4.209.116 - - [23/Jul/2017 00:19:07] "GET /bulma.css HTTP/1.1" 404 747
+31.4.209.116 - - [23/Jul/2017 00:19:12] "POST /login HTTP/1.1" 200 690
+31.4.209.116 - - [23/Jul/2017 00:19:13] "GET /system_info HTTP/1.1" 200 7356
+31.4.209.116 - - [23/Jul/2017 00:19:13] "GET /bulma.css HTTP/1.1" 404 747
+31.4.209.116 - - [23/Jul/2017 00:19:43] "GET /system_info HTTP/1.1" 200 7356
+31.4.209.116 - - [23/Jul/2017 00:19:43] "GET /bulma.css HTTP/1.1" 404 747
+31.4.209.116 - - [23/Jul/2017 00:19:49] "GET /login HTTP/1.1" 405 747
+31.4.209.157 - - [23/Jul/2017 10:07:34] "GET / HTTP/1.1" 200 1925
+31.4.209.157 - - [23/Jul/2017 10:07:34] "GET /static/css/login.css HTTP/1.1" 304 0
+31.4.209.157 - - [23/Jul/2017 10:07:34] "GET /static/css/bootstrap.css HTTP/1.1" 304 0
+31.4.209.157 - - [23/Jul/2017 10:07:34] "GET /static/css/bootstrap-responsive.css HTTP/1.1" 304 0
+31.4.209.157 - - [23/Jul/2017 10:07:36] "POST /login HTTP/1.1" 200 690
+31.4.209.157 - - [23/Jul/2017 10:07:36] "GET /static/js/bootbox.min.js HTTP/1.1" 304 0
+31.4.209.157 - - [23/Jul/2017 10:07:36] "GET /static/js/jquery-1.9.0.min.js HTTP/1.1" 304 0
+31.4.209.157 - - [23/Jul/2017 10:07:36] "GET /static/css/bulma.css HTTP/1.1" 304 0
+31.4.209.157 - - [23/Jul/2017 10:07:36] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+31.4.209.157 - - [23/Jul/2017 10:07:37] "GET /system_info HTTP/1.1" 200 7361
+31.4.209.157 - - [23/Jul/2017 10:07:37] "GET /bulma.css HTTP/1.1" 404 747
+46.17.47.89 - - [23/Jul/2017 11:14:47] "GET /recordings/ HTTP/1.1" 404 745
+46.17.47.89 - - [23/Jul/2017 11:14:47] code 400, message Bad request syntax ('\x16\x03\x01\x00\x90\x01\x00\x00\x8c\x03\x03\xbcnOwX\x93m\xb1\xab!{\xee=:\xaa\xed\xe0\xee\xf7\x06\xd0\xf9\x86\x93\x13\xb33\xc5\xe6;\xd6\x89\x00\x00.\xc0+\xc0/\x00\x9e\x00\x9c\xc0')
+46.17.47.89 - - [23/Jul/2017 11:14:47] " ê  åºnOwXìm±´!{Ó=:™Ì‡Ó˜–˘Üì≥3≈Ê;÷â  .¿+¿/ û ú¿" 400 -
+31.4.209.157 - - [23/Jul/2017 11:19:04] "GET /login HTTP/1.1" 405 747
+31.4.209.157 - - [23/Jul/2017 12:07:20] "GET / HTTP/1.1" 200 1925
+31.4.209.157 - - [23/Jul/2017 12:07:22] "POST /login HTTP/1.1" 200 690
+31.4.209.157 - - [23/Jul/2017 12:07:22] "GET /system_info HTTP/1.1" 200 7361
+31.4.209.157 - - [23/Jul/2017 12:07:23] "GET /bulma.css HTTP/1.1" 404 747
+31.4.209.157 - - [23/Jul/2017 12:13:37] "GET / HTTP/1.1" 200 1925
+31.4.209.157 - - [23/Jul/2017 12:16:46] "POST /login HTTP/1.1" 200 690
+31.4.209.157 - - [23/Jul/2017 12:16:47] "GET /system_info HTTP/1.1" 200 7368
+31.4.209.157 - - [23/Jul/2017 12:16:52] "GET /bulma.css HTTP/1.1" 404 747
+31.4.209.157 - - [23/Jul/2017 12:20:13] "GET / HTTP/1.1" 200 1925
+31.4.209.157 - - [23/Jul/2017 12:20:20] "POST /login HTTP/1.1" 200 690
+31.4.209.157 - - [23/Jul/2017 12:20:21] "GET /system_info HTTP/1.1" 200 7361
+31.4.209.157 - - [23/Jul/2017 12:20:21] "GET /bulma.css HTTP/1.1" 404 747
+31.4.209.157 - - [23/Jul/2017 12:57:18] "GET / HTTP/1.1" 200 1925
+31.4.209.157 - - [23/Jul/2017 12:57:28] "GET /login HTTP/1.1" 405 747
+31.4.209.157 - - [23/Jul/2017 12:57:31] "POST /login HTTP/1.1" 200 1925
+31.4.209.157 - - [23/Jul/2017 12:57:38] "POST /login HTTP/1.1" 200 690
+31.4.209.157 - - [23/Jul/2017 12:57:39] "GET /system_info HTTP/1.1" 200 7361
+31.4.209.157 - - [23/Jul/2017 12:57:40] "GET /bulma.css HTTP/1.1" 404 747
+31.4.209.157 - - [23/Jul/2017 12:58:11] "GET /system_info HTTP/1.1" 200 7361
+31.4.209.157 - - [23/Jul/2017 12:58:11] "GET /bulma.css HTTP/1.1" 404 747
+31.4.209.157 - - [23/Jul/2017 12:59:21] "GET /system_info HTTP/1.1" 200 7361
+31.4.209.157 - - [23/Jul/2017 12:59:21] "GET /bulma.css HTTP/1.1" 404 747
+31.4.209.157 - - [23/Jul/2017 13:01:45] "GET /system_info HTTP/1.1" 200 7361
+31.4.209.157 - - [23/Jul/2017 13:01:45] "GET /bulma.css HTTP/1.1" 404 747
+31.4.209.157 - - [23/Jul/2017 13:19:54] "GET /system_info HTTP/1.1" 200 7361
+31.4.209.157 - - [23/Jul/2017 13:19:54] "GET /system_info HTTP/1.1" 200 7361
+31.4.209.157 - - [23/Jul/2017 13:19:54] "GET /bulma.css HTTP/1.1" 404 747
+31.4.209.157 - - [23/Jul/2017 13:20:04] "GET /system_info HTTP/1.1" 200 7361
+31.4.209.157 - - [23/Jul/2017 13:20:04] "GET /bulma.css HTTP/1.1" 404 747
+31.4.209.157 - - [23/Jul/2017 13:33:41] "GET / HTTP/1.1" 200 1925
+31.4.209.157 - - [23/Jul/2017 13:43:53] "GET / HTTP/1.1" 200 1925
+31.4.209.157 - - [23/Jul/2017 13:43:53] "GET /favicon.ico HTTP/1.1" 200 1925
+31.4.209.157 - - [23/Jul/2017 13:43:54] "POST /login HTTP/1.1" 200 690
+31.4.209.157 - - [23/Jul/2017 13:43:55] "GET /system_info HTTP/1.1" 200 7361
+31.4.209.157 - - [23/Jul/2017 13:43:55] "GET /favicon.ico HTTP/1.1" 200 1150
+31.4.209.157 - - [23/Jul/2017 13:43:55] "GET /bulma.css HTTP/1.1" 404 747
+31.4.209.157 - - [23/Jul/2017 13:44:44] "GET /system_info HTTP/1.1" 200 7369
+31.4.209.157 - - [23/Jul/2017 13:44:45] "GET /bulma.css HTTP/1.1" 404 747
+31.4.209.157 - - [23/Jul/2017 13:45:13] "GET /system_info HTTP/1.1" 200 7369
+31.4.209.157 - - [23/Jul/2017 13:45:14] "GET /bulma.css HTTP/1.1" 404 747
+31.4.209.157 - - [23/Jul/2017 16:12:17] "GET / HTTP/1.1" 200 1925
+31.4.209.157 - - [23/Jul/2017 16:12:28] "GET /login HTTP/1.1" 405 747
+31.4.209.157 - - [23/Jul/2017 16:12:28] "GET /login HTTP/1.1" 405 747
+31.4.209.157 - - [23/Jul/2017 16:12:32] "GET / HTTP/1.1" 200 1925
+31.4.209.157 - - [23/Jul/2017 16:12:33] "POST /login HTTP/1.1" 200 690
+31.4.209.157 - - [23/Jul/2017 16:12:34] "GET /system_info HTTP/1.1" 200 7361
+31.4.209.157 - - [23/Jul/2017 16:12:34] "GET /bulma.css HTTP/1.1" 404 747
+31.4.209.157 - - [23/Jul/2017 16:13:04] "GET /system_info HTTP/1.1" 200 7361
+31.4.209.157 - - [23/Jul/2017 16:13:04] "GET /bulma.css HTTP/1.1" 404 747
+31.4.209.157 - - [23/Jul/2017 16:18:44] "GET / HTTP/1.1" 200 1925
+31.4.209.157 - - [23/Jul/2017 16:18:46] "POST /login HTTP/1.1" 200 690
+31.4.209.157 - - [23/Jul/2017 16:18:47] "GET /system_info HTTP/1.1" 200 7361
+31.4.209.157 - - [23/Jul/2017 16:18:47] "GET /bulma.css HTTP/1.1" 404 747
+31.4.209.157 - - [23/Jul/2017 16:18:48] "GET /login HTTP/1.1" 405 747
+31.4.209.157 - - [23/Jul/2017 19:25:07] "GET / HTTP/1.1" 200 1925
+31.4.209.157 - - [23/Jul/2017 19:25:07] "GET /static/css/bootstrap.css HTTP/1.1" 304 0
+31.4.209.157 - - [23/Jul/2017 19:25:07] "GET /static/css/login.css HTTP/1.1" 304 0
+31.4.209.157 - - [23/Jul/2017 19:25:07] "GET /static/css/bootstrap-responsive.css HTTP/1.1" 304 0
+31.4.209.157 - - [23/Jul/2017 19:25:09] "POST /login HTTP/1.1" 200 690
+31.4.209.157 - - [23/Jul/2017 19:25:09] "GET /static/css/bulma.css HTTP/1.1" 304 0
+31.4.209.157 - - [23/Jul/2017 19:25:09] "GET /static/js/jquery-1.9.0.min.js HTTP/1.1" 304 0
+31.4.209.157 - - [23/Jul/2017 19:25:09] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+31.4.209.157 - - [23/Jul/2017 19:25:09] "GET /static/js/bootbox.min.js HTTP/1.1" 304 0
+31.4.209.157 - - [23/Jul/2017 19:25:10] "GET /system_info HTTP/1.1" 200 7358
+31.4.209.157 - - [23/Jul/2017 19:25:10] "GET /bulma.css HTTP/1.1" 404 747
+31.4.211.54 - - [24/Jul/2017 13:10:24] "GET / HTTP/1.1" 200 1925
+31.4.211.54 - - [24/Jul/2017 13:10:24] "GET /static/css/bootstrap-responsive.css HTTP/1.1" 304 0
+31.4.211.54 - - [24/Jul/2017 13:10:24] "GET /static/css/bootstrap.css HTTP/1.1" 304 0
+31.4.211.54 - - [24/Jul/2017 13:10:24] "GET /static/css/login.css HTTP/1.1" 304 0
+31.4.211.54 - - [24/Jul/2017 13:10:28] "POST /login HTTP/1.1" 200 690
+31.4.211.54 - - [24/Jul/2017 13:10:28] "GET /static/js/jquery-1.9.0.min.js HTTP/1.1" 304 0
+31.4.211.54 - - [24/Jul/2017 13:10:28] "GET /static/css/bulma.css HTTP/1.1" 304 0
+31.4.211.54 - - [24/Jul/2017 13:10:28] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+31.4.211.54 - - [24/Jul/2017 13:10:28] "GET /static/js/bootbox.min.js HTTP/1.1" 304 0
+31.4.211.54 - - [24/Jul/2017 13:10:29] "GET /system_info HTTP/1.1" 200 7363
+31.4.211.54 - - [24/Jul/2017 13:10:29] "GET /bulma.css HTTP/1.1" 404 747
+31.4.211.54 - - [24/Jul/2017 13:23:10] "GET / HTTP/1.1" 200 1925
+31.4.211.54 - - [24/Jul/2017 13:23:15] "POST /login HTTP/1.1" 200 690
+31.4.211.54 - - [24/Jul/2017 13:23:15] "GET /system_info HTTP/1.1" 200 7370
+31.4.211.54 - - [24/Jul/2017 13:23:16] "GET /bulma.css HTTP/1.1" 404 747
+31.4.211.65 - - [24/Jul/2017 18:06:41] "GET / HTTP/1.1" 200 1925
+31.4.211.65 - - [24/Jul/2017 18:06:43] "POST /login HTTP/1.1" 200 690
+31.4.211.65 - - [24/Jul/2017 18:06:44] "GET /system_info HTTP/1.1" 200 7363
+31.4.211.65 - - [24/Jul/2017 18:07:01] "GET /bulma.css HTTP/1.1" 404 747
+31.4.211.65 - - [24/Jul/2017 18:13:23] "GET /login HTTP/1.1" 405 747
+47.60.47.202 - - [25/Jul/2017 08:13:38] "GET / HTTP/1.1" 200 1925
+47.60.47.202 - - [25/Jul/2017 08:13:38] "GET /login HTTP/1.1" 405 747
+47.60.47.202 - - [25/Jul/2017 08:13:38] "GET / HTTP/1.1" 200 1925
+47.60.47.202 - - [25/Jul/2017 08:13:38] "GET /static/css/bootstrap.css HTTP/1.1" 304 0
+47.60.47.202 - - [25/Jul/2017 08:13:38] "GET /static/css/login.css HTTP/1.1" 304 0
+47.60.47.202 - - [25/Jul/2017 08:13:39] "GET /static/css/bootstrap-responsive.css HTTP/1.1" 304 0
+47.60.47.202 - - [25/Jul/2017 08:13:41] "POST /login HTTP/1.1" 200 690
+47.60.47.202 - - [25/Jul/2017 08:13:41] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+47.60.47.202 - - [25/Jul/2017 08:13:41] "GET /static/css/bulma.css HTTP/1.1" 304 0
+47.60.47.202 - - [25/Jul/2017 08:13:41] "GET /static/js/bootbox.min.js HTTP/1.1" 304 0
+47.60.47.202 - - [25/Jul/2017 08:13:41] "GET /static/js/jquery-1.9.0.min.js HTTP/1.1" 304 0
+47.60.47.202 - - [25/Jul/2017 08:13:42] "GET /system_info HTTP/1.1" 200 7363
+47.60.47.202 - - [25/Jul/2017 08:13:42] "GET /bulma.css HTTP/1.1" 404 747
+192.168.1.6 - - [25/Jul/2017 17:00:27] "GET / HTTP/1.1" 200 1925
+192.168.1.6 - - [25/Jul/2017 17:00:27] "GET /static/css/bootstrap.css HTTP/1.1" 200 124223
+192.168.1.6 - - [25/Jul/2017 17:00:27] "GET /static/css/login.css HTTP/1.1" 200 668
+192.168.1.6 - - [25/Jul/2017 17:00:27] "GET /static/css/bootstrap-responsive.css HTTP/1.1" 200 21751
+192.168.1.6 - - [25/Jul/2017 17:00:27] "GET /favicon.ico HTTP/1.1" 200 1925
+192.168.1.6 - - [25/Jul/2017 17:00:32] "POST /login HTTP/1.1" 200 690
+192.168.1.6 - - [25/Jul/2017 17:00:32] "GET /static/css/bulma.css HTTP/1.1" 200 250704
+192.168.1.6 - - [25/Jul/2017 17:00:32] "GET /static/js/jquery-1.9.0.min.js HTTP/1.1" 200 93068
+192.168.1.6 - - [25/Jul/2017 17:00:32] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 31596
+192.168.1.6 - - [25/Jul/2017 17:00:32] "GET /static/js/bootbox.min.js HTTP/1.1" 200 5591
+192.168.1.6 - - [25/Jul/2017 17:00:32] "GET /system_info HTTP/1.1" 200 7357
+192.168.1.6 - - [25/Jul/2017 17:00:32] "GET /bulma.css HTTP/1.1" 404 740
+192.168.1.6 - - [25/Jul/2017 17:00:38] "POST /login HTTP/1.1" 200 690
+192.168.1.6 - - [25/Jul/2017 17:00:38] "GET /static/css/bulma.css HTTP/1.1" 304 0
+192.168.1.6 - - [25/Jul/2017 17:00:38] "GET /static/js/jquery-1.9.0.min.js HTTP/1.1" 304 0
+192.168.1.6 - - [25/Jul/2017 17:00:38] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+192.168.1.6 - - [25/Jul/2017 17:00:38] "GET /static/js/bootbox.min.js HTTP/1.1" 304 0
+192.168.1.6 - - [25/Jul/2017 17:00:39] "GET /system_info HTTP/1.1" 200 7356
+192.168.1.6 - - [25/Jul/2017 17:00:39] "GET /bulma.css HTTP/1.1" 404 740
+192.168.1.6 - - [25/Jul/2017 17:01:09] "GET /system_info HTTP/1.1" 200 7356
+192.168.1.6 - - [25/Jul/2017 17:01:09] "GET /bulma.css HTTP/1.1" 404 740
+192.168.1.6 - - [25/Jul/2017 17:01:39] "GET /system_info HTTP/1.1" 200 7356
+192.168.1.6 - - [25/Jul/2017 17:01:39] "GET /bulma.css HTTP/1.1" 404 740
+192.168.1.6 - - [25/Jul/2017 17:02:09] "GET /system_info HTTP/1.1" 200 7356
+192.168.1.6 - - [25/Jul/2017 17:02:09] "GET /bulma.css HTTP/1.1" 404 740
+192.168.1.6 - - [25/Jul/2017 17:02:39] "GET /system_info HTTP/1.1" 200 7348
+192.168.1.6 - - [25/Jul/2017 17:02:39] "GET /bulma.css HTTP/1.1" 404 740
+192.168.1.6 - - [25/Jul/2017 17:03:09] "GET /system_info HTTP/1.1" 200 7356
+192.168.1.6 - - [25/Jul/2017 17:03:09] "GET /bulma.css HTTP/1.1" 404 740
+192.168.1.6 - - [25/Jul/2017 17:03:39] "GET /system_info HTTP/1.1" 200 7363
+192.168.1.6 - - [25/Jul/2017 17:03:39] "GET /bulma.css HTTP/1.1" 404 740
+192.168.1.6 - - [25/Jul/2017 17:04:09] "GET /system_info HTTP/1.1" 200 7356
+192.168.1.6 - - [25/Jul/2017 17:04:09] "GET /bulma.css HTTP/1.1" 404 740
+192.168.1.6 - - [25/Jul/2017 17:04:39] "GET /system_info HTTP/1.1" 200 7356
+192.168.1.6 - - [25/Jul/2017 17:04:39] "GET /bulma.css HTTP/1.1" 404 740
+192.168.1.6 - - [25/Jul/2017 17:05:09] "GET /system_info HTTP/1.1" 200 7363
+192.168.1.6 - - [25/Jul/2017 17:05:09] "GET /bulma.css HTTP/1.1" 404 740
+192.168.1.6 - - [25/Jul/2017 17:05:39] "GET /system_info HTTP/1.1" 200 7358
+192.168.1.6 - - [25/Jul/2017 17:05:39] "GET /bulma.css HTTP/1.1" 404 740
